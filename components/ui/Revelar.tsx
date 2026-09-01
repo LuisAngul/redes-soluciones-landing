@@ -1,0 +1,32 @@
+"use client";
+
+import { motion, type Variants } from "framer-motion";
+import type { ReactNode } from "react";
+
+const variantes: Variants = {
+  oculto: { opacity: 0, y: 28 },
+  visible: { opacity: 1, y: 0 },
+};
+
+export default function Revelar({
+  children,
+  className = "",
+  delay = 0,
+}: {
+  children: ReactNode;
+  className?: string;
+  delay?: number;
+}) {
+  return (
+    <motion.div
+      initial="oculto"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-100px" }}
+      variants={variantes}
+      transition={{ duration: 0.6, delay, ease: [0.16, 1, 0.3, 1] }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
+}

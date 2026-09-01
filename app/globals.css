@@ -1,26 +1,65 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-grafito: #101820;
+  --color-azul: #0b5fa5;
+  --color-ambar: #f2a20c;
+  --color-acero: #5a6672;
+  --color-tecnico: #f6f7f8;
+  --color-blanco: #ffffff;
+
+  --font-display: var(--font-archivo), "Archivo", sans-serif;
+  --font-body: var(--font-plex), "IBM Plex Sans", sans-serif;
+  --font-mono: var(--font-plex-mono), "IBM Plex Mono", monospace;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  background-color: var(--color-tecnico);
+  color: var(--color-grafito);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+/* Foco accesible: contorno ámbar 2px con desplazamiento */
+:focus-visible {
+  outline: 2px solid var(--color-ambar);
+  outline-offset: 2px;
+}
+
+/* Trazo de onda del hero: se dibuja una sola vez al cargar */
+.trazo-onda {
+  animation: dibujar-onda 1.4s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .trazo-onda {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dibujar-onda {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
