@@ -84,6 +84,20 @@ export default function HeroCollage() {
           loading="eager"
         />
       </motion.div>
+      <motion.div
+        initial="oculto"
+        animate="visible"
+        variants={variantesTile}
+        transition={transicion(0.75)}
+        className="absolute -top-8 -right-8 h-32 w-32 overflow-hidden rounded-lg border-4 border-azul shadow-xl xl:h-40 xl:w-40"
+      >
+        <img
+          src="/hero/automatizacion-digital.jpg"
+          alt="Ingeniero supervisando automatización industrial con tablet y datos en tiempo real"
+          className="h-full w-full object-cover"
+          loading="eager"
+        />
+      </motion.div>
     </div>
   );
 }

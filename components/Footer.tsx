@@ -12,10 +12,12 @@ export default function Footer() {
     <footer className="bg-grafito text-acero">
       <Container className="grid grid-cols-1 gap-10 py-14 md:grid-cols-2 lg:grid-cols-4">
         <div>
-          <p className="font-display text-[17px] font-semibold tracking-tight text-blanco">
-            Redes Eléctricas y Soluciones SAS
-          </p>
-          <p className="mt-3 text-[15px]">NIT 900.442.127-8</p>
+          <img
+            src="/logo.png"
+            alt="Redes Eléctricas y Soluciones SAS"
+            className="h-13 w-auto sm:h-15"
+          />
+          <p className="mt-4 text-[15px]">NIT 900.442.127-8</p>
           <p className="mt-1 text-[15px]">Barranquilla – Colombia</p>
         </div>
 

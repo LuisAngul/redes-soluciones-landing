@@ -41,13 +41,6 @@ export default function AlquilerEquipos() {
               ))}
             </ul>
           </div>
-
-          <button
-            type="button"
-            className="mt-8 bg-ambar px-6 py-3 font-semibold text-grafito transition duration-200 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0"
-          >
-            Consultar disponibilidad
-          </button>
         </Revelar>
       </Container>
     </section>

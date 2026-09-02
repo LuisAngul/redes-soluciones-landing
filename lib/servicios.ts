@@ -11,6 +11,7 @@ export const servicios: Servicio[] = [
     nombre: "Automatización de procesos",
     icono: "workflow",
     resumen: "Control, supervisión y comunicación industrial de extremo a extremo.",
+    imagen: "/servicios/automatizacion-procesos.jpg",
     viñetas: [
       "Control automático de procesos industriales, distribuido y remoto",
       "Sistemas SCADA y redes de comunicación industrial",
