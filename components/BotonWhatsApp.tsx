@@ -2,9 +2,10 @@
 
 import { useEffect, useState } from "react";
 import { MessageCircle } from "lucide-react";
+import { siteConfig } from "@/lib/site-config";
 
 const URL_WHATSAPP =
-  "https://wa.me/573016434302?text=" +
+  `${siteConfig.whatsappUrl}?text=` +
   encodeURIComponent("Hola, quiero cotizar un servicio.");
 
 export default function BotonWhatsApp() {

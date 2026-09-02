@@ -33,7 +33,7 @@ export function TarjetaServicio({
   }
 
   return (
-    <article className="h-[380px]" style={{ perspective: 1600 }}>
+    <article className="h-[460px] sm:h-[420px] lg:h-[380px]" style={{ perspective: 1600 }}>
       <motion.div
         className="relative h-full w-full"
         style={{ transformStyle: "preserve-3d" }}
@@ -112,7 +112,7 @@ export function TarjetaServicio({
               {resumen}
             </p>
           )}
-          <ul className="mt-4 space-y-2.5 overflow-y-auto">
+          <ul className="mt-4 space-y-2.5">
             {viñetas.map((viñeta) => (
               <li key={viñeta} className="flex gap-2 text-[14px] leading-snug text-blanco/85">
                 <Check

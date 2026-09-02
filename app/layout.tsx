@@ -1,19 +1,18 @@
 import type { Metadata } from "next";
 import { archivo, ibmPlexSans, ibmPlexMono } from "./fonts";
+import { siteConfig } from "@/lib/site-config";
 import "./globals.css";
-
-const siteUrl = "https://www.redeselectricas.com.co";
 
 export const metadata: Metadata = {
   title:
     "Redes Eléctricas y Soluciones SAS | Ingeniería eléctrica, instrumentación y automatización en Barranquilla",
   description:
     "Diseño, montaje y mantenimiento de proyectos eléctricos, instrumentación, automatización y energía solar. Alquiler de equipos de medición. Barranquilla, Colombia.",
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(siteConfig.url),
   openGraph: {
     type: "website",
     locale: "es_CO",
-    url: siteUrl,
+    url: siteConfig.url,
     siteName: "Redes Eléctricas y Soluciones SAS",
     title:
       "Redes Eléctricas y Soluciones SAS | Ingeniería eléctrica, instrumentación y automatización en Barranquilla",
@@ -26,9 +25,9 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "Redes Eléctricas y Soluciones SAS",
-  telephone: "+57 301 643 4302",
-  email: "comercial@redeselectricas.com.co",
-  url: siteUrl,
+  telephone: `+${siteConfig.whatsappNumber}`,
+  email: siteConfig.email,
+  url: siteConfig.url,
   address: {
     "@type": "PostalAddress",
     addressLocality: "Barranquilla",

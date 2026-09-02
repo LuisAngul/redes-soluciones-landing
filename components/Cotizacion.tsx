@@ -5,8 +5,7 @@ import { AlertCircle, CheckCircle2 } from "lucide-react";
 import Container from "./ui/Container";
 import Revelar from "./ui/Revelar";
 import { SERVICIOS_OPCIONES } from "@/lib/cotizacion";
-
-const WHATSAPP_URL = "https://wa.me/573016434302";
+import { siteConfig } from "@/lib/site-config";
 
 type Estado = "idle" | "enviando" | "exito" | "error";
 
@@ -66,7 +65,7 @@ export default function Cotizacion() {
     // TODO: conectar con el servicio de correo o CRM.
     // Conversión actual: enviamos la solicitud prellenada por WhatsApp.
     window.open(
-      `${WHATSAPP_URL}?text=${encodeURIComponent(construirMensaje())}`,
+      `${siteConfig.whatsappUrl}?text=${encodeURIComponent(construirMensaje())}`,
       "_blank",
       "noopener,noreferrer",
     );
@@ -235,9 +234,8 @@ export default function Cotizacion() {
                   className="flex items-start gap-2.5 border border-red-400/30 bg-red-400/10 px-4 py-3 text-[15px] text-blanco"
                 >
                   <AlertCircle aria-hidden="true" size={20} className="mt-0.5 shrink-0 text-red-400" />
-                  No se pudo enviar la solicitud. Verifica los campos obligatorios
-                  o escríbenos a comercial@redeselectricas.com.co o al WhatsApp
-                  301 643 4302.
+                   No se pudo enviar la solicitud. Verifica los campos obligatorios
+                   o escríbenos a {siteConfig.email} o al WhatsApp {siteConfig.phoneDisplay}.
                 </p>
               )}
             </form>
@@ -249,30 +247,30 @@ export default function Cotizacion() {
               <div className="space-y-4 text-[15px]">
                 <p>
                   <a
-                    href={`${WHATSAPP_URL}?text=${encodeURIComponent(
+                     href={`${siteConfig.whatsappUrl}?text=${encodeURIComponent(
                       "Hola, quiero cotizar un servicio.",
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blanco/85 transition-colors duration-200 hover:text-blanco"
                   >
-                    Teléfono / WhatsApp: <span className="text-ambar">301 643 43-02</span>
+                     Teléfono / WhatsApp: <span className="text-ambar">{siteConfig.phoneDisplay}</span>
                   </a>
                 </p>
                 <p>
                   <a
-                    href="mailto:comercial@redeselectricas.com.co"
+                     href={`mailto:${siteConfig.email}`}
                     className="text-blanco/85 transition-colors duration-200 hover:text-blanco"
                   >
-                    Correo: comercial@redeselectricas.com.co
+                     Correo: {siteConfig.email}
                   </a>
                 </p>
                 <p>
                   <a
-                    href="https://www.redeselectricas.com.co"
+                     href={siteConfig.url}
                     className="text-blanco/85 transition-colors duration-200 hover:text-blanco"
                   >
-                    Sitio web: www.redeselectricas.com.co
+                     Sitio web: {siteConfig.url.replace(/^https?:\/\//, "")}
                   </a>
                 </p>
                 <p className="text-blanco/85">Barranquilla, Colombia</p>

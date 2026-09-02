@@ -16,6 +16,12 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Variables de entorno
+
+Copia `.env.example` como `.env.local` para configurar la URL pública y los datos
+de contacto. En Vercel, agrega las mismas variables en Project Settings > Environment
+Variables y vuelve a desplegar para que los cambios sean incluidos en el build.
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.

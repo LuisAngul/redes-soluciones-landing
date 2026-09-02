@@ -1,4 +1,5 @@
 import Container from "./ui/Container";
+import { siteConfig } from "@/lib/site-config";
 
 const enlaces = [
   { href: "#servicios", label: "Servicios" },
@@ -26,28 +27,28 @@ export default function Footer() {
           <ul className="mt-3 space-y-2 text-[15px]">
             <li>
               <a
-                href="https://wa.me/573016434302"
+                 href={siteConfig.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="transition-colors duration-200 hover:text-blanco"
               >
-                Teléfono / WhatsApp: 301 643 43-02
+                 Teléfono / WhatsApp: {siteConfig.phoneDisplay}
               </a>
             </li>
             <li>
               <a
-                href="mailto:comercial@redeselectricas.com.co"
+                 href={`mailto:${siteConfig.email}`}
                 className="transition-colors duration-200 hover:text-blanco"
               >
-                comercial@redeselectricas.com.co
+                 {siteConfig.email}
               </a>
             </li>
             <li>
               <a
-                href="https://www.redeselectricas.com.co"
+                 href={siteConfig.url}
                 className="transition-colors duration-200 hover:text-blanco"
               >
-                www.redeselectricas.com.co
+                 {siteConfig.url.replace(/^https?:\/\//, "")}
               </a>
             </li>
           </ul>

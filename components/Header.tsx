@@ -31,12 +31,12 @@ export default function Header() {
         claro ? "border-b border-acero/20 bg-blanco" : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex w-full max-w-[1200px] items-center justify-between gap-6 px-6 py-4">
+      <div className="mx-auto flex w-full max-w-[1200px] items-center justify-between gap-2 px-4 py-3 sm:gap-6 sm:px-6 sm:py-4">
         <a href="#" className="shrink-0">
           <img
             src="/logo.png"
             alt="Redes Eléctricas y Soluciones SAS"
-            className="h-13 w-auto sm:h-15"
+            className="h-10 w-auto max-w-[120px] object-contain sm:h-15 sm:max-w-none"
           />
         </a>
 
@@ -60,19 +60,20 @@ export default function Header() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex shrink-0 items-center gap-2 sm:gap-3">
           <a
             href="#cotizacion"
-            className="bg-ambar px-4 py-2.5 text-center font-semibold text-grafito transition duration-200 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0"
+            className="shrink-0 whitespace-nowrap bg-ambar px-3 py-2.5 text-center text-sm font-semibold leading-tight text-grafito transition duration-200 hover:-translate-y-0.5 hover:shadow-md active:translate-y-0 sm:px-4 sm:text-base"
           >
-            Solicitar cotización
+            <span className="sm:hidden">Cotizar</span>
+            <span className="hidden sm:inline">Solicitar cotización</span>
           </a>
           <button
             type="button"
-            aria-label="Abrir menú"
+            aria-label={abierto ? "Cerrar menú" : "Abrir menú"}
             aria-expanded={abierto}
             onClick={() => setAbierto((v) => !v)}
-            className={`lg:hidden ${claro ? "text-grafito" : "text-blanco"}`}
+            className={`flex h-11 w-11 shrink-0 items-center justify-center lg:hidden ${claro ? "text-grafito" : "text-blanco"}`}
           >
             {abierto ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
           </button>
