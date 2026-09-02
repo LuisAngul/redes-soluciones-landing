@@ -11,6 +11,14 @@
   --font-display: var(--font-archivo), "Archivo", sans-serif;
   --font-body: var(--font-plex), "IBM Plex Sans", sans-serif;
   --font-mono: var(--font-plex-mono), "IBM Plex Mono", monospace;
+
+  /* shadcn/ui semantic tokens, mapped onto the brand palette above so
+     shadcn-style components (bg-background, text-foreground, etc.)
+     stay visually consistent with the rest of the site. */
+  --color-background: var(--color-blanco);
+  --color-foreground: var(--color-grafito);
+  --color-border: var(--color-acero);
+  --color-muted-foreground: var(--color-acero);
 }
 
 html {

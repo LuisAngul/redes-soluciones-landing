@@ -23,6 +23,7 @@ export const servicios: Servicio[] = [
     nombre: "Instrumentación industrial",
     icono: "gauge",
     resumen: "Medición y control preciso de las variables de tu proceso.",
+    imagen: "/servicios/instrumentacion-industrial.jpg",
     viñetas: [
       "Diseño y montaje de sistemas de instrumentación",
       "Calibración y mantenimiento de equipos",
@@ -70,6 +71,7 @@ export const servicios: Servicio[] = [
     nombre: "Suministro de materiales",
     icono: "package",
     resumen: "Materiales y equipos de marcas líderes, listos para tu proyecto.",
+    imagen: "/servicios/suministro-materiales.jpg",
     viñetas: [
       "Materiales eléctricos y de automatización de marcas reconocidas del sector",
       "Siemens, WEG, Danfoss, ABB, Delta, Omron, Schneider Electric y Rockwell Automation",
