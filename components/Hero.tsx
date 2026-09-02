@@ -28,7 +28,7 @@ const IMAGENES_HERO = [
 
 export default function Hero() {
   return (
-    <section className="relative bg-grafito">
+    <section className="relative overflow-hidden bg-grafito">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 [background-image:radial-gradient(circle,color-mix(in_oklab,var(--color-blanco)_12%,transparent)_1px,transparent_1px)] [background-size:28px_28px] [mask-image:radial-gradient(ellipse_80%_60%_at_50%_0%,black,transparent)]"

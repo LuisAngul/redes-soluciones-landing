@@ -32,7 +32,7 @@ export default function FranjaMarcas() {
 
       <Revelar delay={0.1} className="relative mt-6 overflow-hidden">
         <MarqueeStyles />
-        <MarqueeRow speed={34} direction="left" className="[--gap:3.5rem] p-0">
+        <MarqueeRow speed={60} direction="left" className="[--gap:3.5rem] p-0">
           {marcasCarrusel.map((marca, i) => (
             <img
               key={`${marca.nombre}-${i}`}
